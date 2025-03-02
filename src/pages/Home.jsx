@@ -1,0 +1,60 @@
+"use client";
+
+import { useState } from "react";
+import { Dialog, DialogPanel } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Header from "../components/layout/Header";
+import { Link } from "react-router-dom";
+import { color, motion } from "motion/react";
+
+const navigation = [
+  { name: "Product", href: "#" },
+  { name: "Features", href: "#" },
+  { name: "Marketplace", href: "#" },
+  { name: "Company", href: "#" },
+];
+
+export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  return (
+    <div className="absolute inset-0 h-full w-full bg-black">
+      <header className="absolute inset-x-0 top-0 z-50">
+        <Header />
+      </header>
+
+      <div className="relative isolate px-6 pt-7 lg:px-8">
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="hidden sm:mb-1 sm:flex sm:justify-center">
+            <div className="mt-8 text-lg font-main font-light text-pretty text-fuchsia-200 sm:text-xl/8">
+              HI, I'M
+            </div>
+          </div>
+          <div className="text-center">
+            <p className="text-white font-brand font-semibold tracking-wide  sm:text-[60px] max-sm:text-[40px]  lg:text-[85px]">
+              VORAKORN
+            </p>
+
+            <p className="mt-8 text-lg font-main font-light text-pretty text-fuchsia-200 sm:text-xl/8">
+              YOUR FAVOERITE CREATIVE DEVERLOPER
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <motion.a
+                href="#"
+                className="font-main !text-fuchsia-200 w-[150px] rounded-[30px] px-3 py-2 text-lg border font-light relative"
+                initial={{ opacity: 1 }}
+                whileHover={{ opacity: 0.5 }}
+              >
+                SAY HI
+              </motion.a>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        ></div>
+      </div>
+    </div>
+  );
+}
