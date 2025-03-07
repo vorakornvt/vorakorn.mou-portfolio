@@ -1,22 +1,10 @@
-"use client";
-
-import { useState } from "react";
-import { Dialog, DialogPanel } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Header from "../components/layout/Header";
-import { Link } from "react-router-dom";
-import { color, motion } from "motion/react";
-
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
+import { motion } from "motion/react";
+import WorkGrid from "../components/features/Workgrid";
+import Narrow from "../components/common/Narrow";
+import ProjectsPage from "./ProjectsPage";
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
     <div className="absolute inset-0 h-full w-full bg-black">
       <header className="absolute inset-x-0 top-0 z-50">
@@ -50,10 +38,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-        ></div>
+        <div className="absolute w-full items-center pt-170 inset-x-0 top-0 z-50">
+          <WorkGrid />
+
+          <Narrow />
+          <ProjectsPage />
+        </div>
       </div>
     </div>
   );
