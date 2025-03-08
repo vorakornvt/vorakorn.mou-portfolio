@@ -1,89 +1,156 @@
+import { motion } from "framer-motion";
 import ProjectTag from "../../src/assets/Asset13.svg";
-import { motion } from "motion/react";
+
+const projects = [
+  {
+    id: 1,
+    name: "Project Name 1",
+    description: "Project description for project 1.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzoPuARTLpGDSS6EdjrwNY2TEDnpzNGWzuaw&s",
+    technologies: ["JSX", "CSS", "CSS.TS", "HTML"],
+    mockupLink: "#",
+    codeLink: "#",
+  },
+  {
+    id: 1,
+    name: "Project Name 1",
+    description: "Project description for project 1.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzoPuARTLpGDSS6EdjrwNY2TEDnpzNGWzuaw&s",
+    technologies: ["JSX", "CSS", "CSS.TS", "HTML"],
+    mockupLink: "#",
+    codeLink: "#",
+  },
+  {
+    id: 1,
+    name: "Project Name 1",
+    description: "Project description for project 1.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzoPuARTLpGDSS6EdjrwNY2TEDnpzNGWzuaw&s",
+    technologies: ["JSX", "CSS", "CSS.TS", "HTML"],
+    mockupLink: "#",
+    codeLink: "#",
+  },
+  {
+    id: 1,
+    name: "Project Name 1",
+    description: "Project description for project 1.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzoPuARTLpGDSS6EdjrwNY2TEDnpzNGWzuaw&s",
+    technologies: ["JSX", "CSS", "CSS.TS", "HTML"],
+    mockupLink: "#",
+    codeLink: "#",
+  },
+  {
+    id: 1,
+    name: "Project Name 1",
+    description: "Project description for project 1.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzoPuARTLpGDSS6EdjrwNY2TEDnpzNGWzuaw&s",
+    technologies: ["JSX", "CSS", "CSS.TS", "HTML"],
+    mockupLink: "#",
+    codeLink: "#",
+  },
+  {
+    id: 1,
+    name: "Project Name 1",
+    description: "Project description for project 1.",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzoPuARTLpGDSS6EdjrwNY2TEDnpzNGWzuaw&s",
+    technologies: ["JSX", "CSS", "CSS.TS", "HTML"],
+    mockupLink: "#",
+    codeLink: "#",
+  },
+];
 
 function ProjectsPage() {
   return (
-    <div className="bg-black">
-      <div
-        className="flex pb-1 justify-center "
-        style={{
-          borderRadius: "10px",
-          overflow: "hidden",
-          border: "solid 0.5px white",
-          height: "600px",
-        }}
-      >
-        <div className="m-2 ">
-          <div className="m-5">
-            <img
-              alt="Project"
-              src={ProjectTag}
-              className="h-3 flex justify-center mx-auto"
-            />
-          </div>
-          <div className="group mx-2 mt-3 max-h-60  grid max-w-screen-lg grid-cols-1 space-x-8 overflow-hidden rounded-lg  text-white shadow transition hover:shadow-lg sm:mx-auto sm:grid-cols-5">
-            <a
-              href="#"
-              className="col-span-2 text-left text-white hover:text-gray-100"
-            >
-              <div className="group relative h-full w-full overflow-hidden">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzoPuARTLpGDSS6EdjrwNY2TEDnpzNGWzuaw&s"
-                  alt="Unity course image"
-                  className=" mx-auto mt-4 ms-2   bg-cover p-2  border rounded-md object-cover text-gray-700 "
-                />
-              </div>
-            </a>
-            <div className="col-span-3 flex flex-col text-wrap space-y-0 pr-8 text-left">
-              <p className="mt-3  overflow-hidden text-lg font-main">
-                How to make open world with C# in Unity
-              </p>
-              <p className="overflow-hidden text-wrap font-main text-md">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna .
-              </p>
-              <p href="#" className="text-sm font-main text-fuchsia-100">
-                technologies
-              </p>
+    <div className="bg-black flex flex-col items-center justify-center ">
+      <img
+        alt="Project"
+        src={ProjectTag}
+        className="h-5 mb-5 flex justify-center mx-auto"
+      />
 
-              <div className="flex flex-col text-gray-700 sm:flex-row">
-                <div className="flex h-fit space-x-2 text-sm font-medium">
-                  <div className="rounded-full bg-green-100 px-2 py-0.5 text-green-700">
-                    JSX
-                  </div>
-                  <div className="rounded-full bg-blue-100 px-2 py-0.5 text-blue-700">
-                    CSS
-                  </div>
-                  <div className="rounded-full bg-blue-100 px-2 py-0.5 text-blue-700">
-                    CSS.TS
-                  </div>
-                  <div className="rounded-full bg-orange-100 px-2 py-0.5 text-orange-700">
-                    HTML
-                  </div>
+      <div className="grid gap-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-[600px] sm:w-[450px] md:w-[800px] lg:w-[1050px] overflow-y-auto scrollbar-thin scrollbar-thumb-fuchsia-300 pt-2   scrollbar-track-black">
+        {projects.map((project) => (
+          <motion.div
+            key={project.id}
+            className="relative min-w-[260px] sm:w-[260px] md:w-[300px] lg:w-[300px] h-[250px] mx-auto mt-2"
+            style={{ perspective: "1000px" }} // Ensure correct 3D perspective
+          >
+            {/* Card Inner */}
+            <motion.div
+              className="relative w-full h-full sm:col-auto transition-transform duration-500 transform-style-3d group"
+              whileHover={{ rotateY: 180 }} // Flip effect on hover
+              style={{
+                transformStyle: "preserve-3d",
+              }}
+            >
+              {/* Front Side */}
+              <div
+                className="absolute inset-0 flex flex-col justify-center items-center bg-black text-white p-4"
+                style={{
+                  backfaceVisibility: "hidden",
+                  borderRadius: "10px",
+                  border: "solid 0.5px white",
+                }}
+              >
+                <p className="text-lg font-main font-semibold">
+                  {project.name}
+                </p>
+                <p className="text-sm mt-2 text-center">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap justify-center mt-2 space-x-2">
+                  {project.technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="text-fuchsia-200  border-1 px-2 py-1 rounded-full text-xs"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
-              <div className="pt-3 flex justify-center">
-                {" "}
-                <motion.a
-                  href="#"
-                  className="font-main !text-fuchsia-200 me-5 w-[150px]  text-center rounded-[30px] px-3 py-2 text-md border font-light"
-                  initial={{ opacity: 1 }}
-                  whileHover={{ opacity: 0.5 }}
-                >
-                  MOCKUP
-                </motion.a>
-                <motion.a
-                  href="#"
-                  className="font-main !text-fuchsia-200 w-[150px]  text-center rounded-[30px] px-3 py-2 text-md border font-light"
-                  initial={{ opacity: 1 }}
-                  whileHover={{ opacity: 0.5 }}
-                >
-                  CODE
-                </motion.a>
+
+              {/* Back Side */}
+              <div
+                className="absolute inset-0 flex flex-col justify-center  shadow-[0px_0px_10px_rgba(244,168,255,_0.7)] items-center bg-black text-white rounded-lg  p-4"
+                style={{
+                  transform: "rotateY(180deg)",
+                  backfaceVisibility: "hidden",
+                }}
+              >
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-200  object-cover rounded-md"
+                />
+
+                <div className="flex mt-3 space-x-2">
+                  <motion.a
+                    href={project.mockupLink}
+                    className="px-3 py-2 bg-fuchsia-100 !text-fuchsia-900 text-xs rounded-lg"
+                    initial={{ opacity: 1 }}
+                    whileHover={{ opacity: 0.5 }}
+                  >
+                    MOCKUP
+                  </motion.a>
+                  <motion.a
+                    href={project.codeLink}
+                    className="px-3 py-2 bg-fuchsia-100 !text-fuchsia-900 text-xs rounded-lg"
+                    initial={{ opacity: 1 }}
+                    whileHover={{ opacity: 0.5 }}
+                  >
+                    CODE
+                  </motion.a>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
+            </motion.div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );

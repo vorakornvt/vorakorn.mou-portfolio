@@ -19,7 +19,7 @@ export default function Home() {
             </div>
           </div>
           <div className="text-center">
-            <p className="text-white font-brand font-semibold tracking-wide  sm:text-[60px] max-sm:text-[40px]  lg:text-[85px]">
+            <p className="text-white font-brand font-semibold tracking-wide  sm:text-[60px] max-sm:text-[40px]  lg:text-[100px]">
               VORAKORN
             </p>
 
@@ -43,6 +43,7 @@ export default function Home() {
 
           <Narrow />
           <ProjectsPage />
+          <Narrow />
         </div>
       </div>
     </div>
