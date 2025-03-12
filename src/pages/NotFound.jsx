@@ -1,25 +1,22 @@
-import Container from "react-bootstrap/Container"
-import { Link } from "react-router-dom"
-import { BiHome } from "react-icons/bi";
-
-import notFoundLogo from '../assets/leap-wallet.svg'
+import NotFoundTag from "../../src/assets/Notfound.svg";
+import { Link } from "react-router-dom";
 
 function NotFound() {
   return (
-    <div>
-      <Container>
-        <h2>Hmm...</h2>
-        <p>Looks like you lost the page!</p>
-        <div className="notFoundCover">
-          <img src={notFoundLogo} alt="not found frog" />
-        </div>
-
-        <Link to="/" className="homeBtn">
-          <BiHome id="btn-icon" aria-labelledby="Home button"/>
+    <div className="bg-black text-white flex flex-col items-center justify-center min-h-[500px]">
+      <img alt="Project" src={NotFoundTag} className="h-8.5 mb-2" />
+      <p className="text-md text-gray-300">
+        The requested page was not found. You might want to go back to{" "}
+        <Link
+          to="/"
+          className="!text-fuchsia-200 font-bold pt-3 font-main underline"
+        >
+          home
         </Link>
-      </Container>
+        .
+      </p>
     </div>
-  )
+  );
 }
 
-export default NotFound
+export default NotFound;

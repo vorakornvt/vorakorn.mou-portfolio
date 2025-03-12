@@ -1,4 +1,3 @@
-import * as React from "react";
 import { useTheme, useMediaQuery } from "@mui/material";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";

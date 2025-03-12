@@ -5,26 +5,29 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import LogoWhite from "../../assets/LOGOwhite.png";
-import { color, motion } from "motion/react";
+import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "PROJECT", href: "#", current: true },
-  { name: "ABOUT", href: "#", current: false },
-  { name: "CONTACT", href: "#", current: false }, // Fixed spelling: "CONTRACT" -> "CONTACT"
+  { name: "PROJECT", href: "/projects" },
+  { name: "ABOUT", href: "/about" },
+  { name: "CONTACT", href: "/contact" },
 ];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function Header() {
   return (
     <Disclosure as="nav" className="bg-black ">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
-          {/* Logo Centered (Doesn't Block Clicks) */}
-          <div className="absolute inset-x-0 flex justify-center pointer-events-none">
-            <img alt="MOU logo" src={LogoWhite} className="h-10 w-auto" />
+          {/* Logo Centered (Clickable) */}
+          <div className="absolute inset-x-0 flex justify-center">
+            <Link to="/">
+              <img
+                alt="MOU logo"
+                src={LogoWhite}
+                className="h-10 w-auto pointer-events-none"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}

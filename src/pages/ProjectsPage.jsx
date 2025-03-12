@@ -70,7 +70,7 @@ function ProjectsPage() {
       <img
         alt="Project"
         src={ProjectTag}
-        className="h-5 mb-5 flex justify-center mx-auto"
+        className="h-4 mb-5 mt-5 flex justify-center mx-auto"
       />
 
       <div className="grid gap-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-[600px] sm:w-[450px] md:w-[800px] lg:w-[1050px] overflow-y-auto scrollbar-thin scrollbar-thumb-fuchsia-300 pt-2   scrollbar-track-black">
@@ -117,22 +117,21 @@ function ProjectsPage() {
 
               {/* Back Side */}
               <div
-                className="absolute inset-0 flex flex-col justify-center  shadow-[0px_0px_10px_rgba(244,168,255,_0.7)] items-center bg-black text-white rounded-lg  p-4"
+                className="absolute inset-0 flex flex-col justify-end border border-fuchsia-200 items-center bg-black text-white rounded-lg p-4 "
                 style={{
+                  backgroundImage: `url(${project.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
                   transform: "rotateY(180deg)",
                   backfaceVisibility: "hidden",
                 }}
               >
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  className="w-200  object-cover rounded-md"
-                />
-
-                <div className="flex mt-3 space-x-2">
+                <div className="absolute inset-0 bg-black/50 rounded-lg"></div>{" "}
+                {/* Overlay for readability */}
+                <div className="relative z-10 flex space-x-2 mb-4">
                   <motion.a
                     href={project.mockupLink}
-                    className="px-3 py-2 bg-fuchsia-100 !text-fuchsia-900 text-xs rounded-lg"
+                    className="px-3 py-2 text-black bg-fuchsia-200 text-xs rounded-lg"
                     initial={{ opacity: 1 }}
                     whileHover={{ opacity: 0.5 }}
                   >
@@ -140,7 +139,7 @@ function ProjectsPage() {
                   </motion.a>
                   <motion.a
                     href={project.codeLink}
-                    className="px-3 py-2 bg-fuchsia-100 !text-fuchsia-900 text-xs rounded-lg"
+                    className="px-3 py-2 text-black bg-fuchsia-200 text-xs rounded-lg"
                     initial={{ opacity: 1 }}
                     whileHover={{ opacity: 0.5 }}
                   >

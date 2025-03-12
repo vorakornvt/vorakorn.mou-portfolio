@@ -1,24 +1,60 @@
-import { useState } from "react";
-
-import AccordionList from "../components/features/accordion/AccordionList"
-import { Container } from "react-bootstrap"
+import AboutmeTag from "../../src/assets/Asset14.svg";
+import AboutmePic from "../../src/assets/resource-database-yzIZO9-DsNI-unsplash.jpg";
+import { motion } from "motion/react";
+import Timeline from "../components/features/Timeline";
 
 function AboutPage() {
-  // LOGIC - Data level
-  const [panels, setPanels] = useState([
-    { id: 1, title: "What Am I Currently Up To", content: "Lorem ipsum dolor sit amet." },
-    { id: 2, title: "What Makes Me Code", content: "Lorem ipsum dolor sit amet." },
-    { id: 3, title: "What Have I Got Involved In", content: "Lorem ipsum dolor sit amet." },
-  ]);
-
   return (
-    <Container>
-      <h1>About Me</h1>
-      <AccordionList 
-        panels={panels}
-      />
-    </Container>
-  )
+    <div>
+      <div className="bg-black text-white flex flex-col items-center justify-center p-6">
+        <img
+          alt="Project"
+          src={AboutmeTag}
+          className="h-4  mb-5 mt-5 mx-auto"
+        />
+
+        {/* First Row */}
+        <div className="w-full max-w-5xl flex flex-col md:flex-row gap-6">
+          {/* Left Box */}
+          <div className="md:w-1/2 flex flex-col justify-center p-4">
+            <p className="font-brand sm:text-[35px] max-sm:text-[35px] lg:text-[55px]">
+              VORAKORN TAWEETAWON
+            </p>
+            <p className="text-justify mt-4 text-sm md:text-lg font-main">
+              I’m a designer with expertise in web development, enabling me to
+              craft seamless, interactive digital experiences. My background in
+              design brings concepts to life with depth and precision, making
+              the fusion of technology and creativity my true specialty.
+            </p>
+          </div>
+
+          {/* Right Box */}
+          <div className="md:w-1/2 flex justify-center">
+            <img
+              src={AboutmePic}
+              alt="About me"
+              className="w-full max-w-md rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+
+        {/* Second Row */}
+        <div className="w-full max-w-5xl text-center">
+          <div className="flex items-center justify-center gap-x-6">
+            <motion.a
+              href="#"
+              className="font-main !text-fuchsia-200 w-[150px] rounded-[30px] px-3 py-2 text-lg border font-light relative"
+              initial={{ opacity: 1 }}
+              whileHover={{ opacity: 0.5 }}
+            >
+              CV
+            </motion.a>
+          </div>
+        </div>
+      </div>
+      <Timeline />
+    </div>
+  );
 }
 
-export default AboutPage
+export default AboutPage;
