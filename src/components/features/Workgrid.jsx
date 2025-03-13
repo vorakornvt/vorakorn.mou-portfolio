@@ -44,15 +44,30 @@ export default function Workgrid() {
           cols={item.cols || 1}
           rows={item.rows || 1}
           style={{
-            borderRadius: "10px",
+            borderRadius: "2px",
             overflow: "hidden",
-            border: "solid 0.5px white",
           }}
         >
           <img
             {...srcset(item.img, rowHeight, item.rows, item.cols)}
             alt={item.title}
             loading="lazy"
+            style={{
+              opacity: "0.4",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              transition: "filter 0.5s ease-in-out, opacity 0.5s ease-in-out",
+              filter: "grayscale(100%)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.filter = "grayscale(0%)";
+              e.currentTarget.style.opacity = "1";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.filter = "grayscale(100%)";
+              e.currentTarget.style.opacity = "0.4";
+            }}
           />
         </ImageListItem>
       ))}
@@ -62,55 +77,54 @@ export default function Workgrid() {
 
 const itemData = [
   {
-    img: "https://images.unsplash.com/photo-1513569771920-c9e1d31714af?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "/src/assets/WorkGrid/1.3.png",
     title: "1",
     cols: 2,
     rows: 3,
   },
   {
-    img: "https://images.unsplash.com/photo-1513569771920-c9e1d31714af?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "/src/assets/WorkGrid/3.1.png",
     title: "2",
     cols: 2,
     rows: 3,
   },
   {
-    img: "https://images.unsplash.com/photo-1513569771920-c9e1d31714af?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "/src/assets/WorkGrid/4.4.png",
     title: "3",
     cols: 2,
     rows: 1,
   },
   {
-    img: "https://images.unsplash.com/photo-1513569771920-c9e1d31714af?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "/src/assets/WorkGrid/4.1.png",
     title: "4",
     cols: 2,
     rows: 1,
   },
   {
-    img: "https://images.unsplash.com/photo-1513569771920-c9e1d31714af?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "/src/assets/WorkGrid/4.2.png",
     title: "5",
     cols: 3,
     rows: 2,
   },
   {
-    img: "https://images.unsplash.com/photo-1513569771920-c9e1d31714af?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "/src/assets/WorkGrid/3.2.png",
     title: "6",
     cols: 3,
     rows: 2,
   },
   {
-    img: "https://images.unsplash.com/photo-1513569771920-c9e1d31714af?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "7",
+    img: "/src/assets/WorkGrid/2.2.png",
     cols: 1,
     rows: 1,
   },
   {
-    img: "https://images.unsplash.com/photo-1513569771920-c9e1d31714af?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "/src/assets/WorkGrid/4.3.png",
     title: "8",
     cols: 3,
     rows: 1,
   },
   {
-    img: "https://images.unsplash.com/photo-1513569771920-c9e1d31714af?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "/src/assets/WorkGrid/1.2.png",
     title: "9",
     cols: 1,
     rows: 1,

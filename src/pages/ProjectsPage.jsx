@@ -4,65 +4,80 @@ import ProjectTag from "../../src/assets/Asset13.svg";
 const projects = [
   {
     id: 1,
-    name: "Project Name 1",
-    description: "Project description for project 1.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzoPuARTLpGDSS6EdjrwNY2TEDnpzNGWzuaw&s",
-    technologies: ["JSX", "CSS", "CSS.TS", "HTML"],
+    name: "Basic-Frontend",
+    description:
+      "a basic front-end React project, a work-in-progress with minimal content.",
+    image: "../../src/assets/phpimage.png",
+    technologies: ["JSX", "Bootstrap"],
     mockupLink: "#",
-    codeLink: "#",
+    codeLink: "https://github.com/vorakornvt/Basic-Frontend",
   },
   {
-    id: 1,
-    name: "Project Name 1",
-    description: "Project description for project 1.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzoPuARTLpGDSS6EdjrwNY2TEDnpzNGWzuaw&s",
-    technologies: ["JSX", "CSS", "CSS.TS", "HTML"],
+    id: 2,
+    name: "GardenofEden-Website",
+    description:
+      "Modern Tech Stack –  built using React, Tailwind UI, Firebase (Firestore), and Motion for animations.",
+    image: "../../src/assets/Untitled-5.png",
+    technologies: ["JSX", "CSS.TS", "HTML", "Firebase"],
     mockupLink: "#",
-    codeLink: "#",
+    codeLink: "https://github.com/vorakornvt/GardenofEden-Website",
   },
   {
-    id: 1,
-    name: "Project Name 1",
-    description: "Project description for project 1.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzoPuARTLpGDSS6EdjrwNY2TEDnpzNGWzuaw&s",
-    technologies: ["JSX", "CSS", "CSS.TS", "HTML"],
+    id: 3,
+    name: "Database-commercial-website",
+    description:
+      "The frontend is built with React.js and styled using Bootstrap, The backend, handling authentication, database management, and API requests.",
+    image: "../../src/assets/Untitled-4.png",
+    technologies: ["JSX", "Bootstrap", "MongoDB"],
     mockupLink: "#",
-    codeLink: "#",
+    codeLink: "https://github.com/vorakornvt/Database-commercial-website",
   },
   {
-    id: 1,
-    name: "Project Name 1",
-    description: "Project description for project 1.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzoPuARTLpGDSS6EdjrwNY2TEDnpzNGWzuaw&s",
-    technologies: ["JSX", "CSS", "CSS.TS", "HTML"],
-    mockupLink: "#",
-    codeLink: "#",
+    id: 4,
+    name: "PHP-based blog website",
+    description:
+      "PHP-based blog application. The project includes various PHP scripts , which can manage blog functionalities like post creation, editing, and storage.",
+    image: "../../src/assets/Untitled-3.png",
+    technologies: ["PHP", "Bootstrap", "MySql"],
+
+    codeLink: "https://github.com/vorakornvt/PHP-Blog-website",
   },
   {
-    id: 1,
-    name: "Project Name 1",
-    description: "Project description for project 1.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzoPuARTLpGDSS6EdjrwNY2TEDnpzNGWzuaw&s",
-    technologies: ["JSX", "CSS", "CSS.TS", "HTML"],
-    mockupLink: "#",
-    codeLink: "#",
+    id: 5,
+    name: "UI Component",
+    description:
+      "NPM package for Reuseable Button & Alert & Alert dialog components.",
+    image: "../../src/assets/Untitled-2.png",
+    technologies: ["JSX", "CSS", "Styled Components"],
+    mockupLink: "https://sync-documentation.onrender.com/",
+    codeLink: "https://github.com/4DEVS-Holmesglen/4DEVS-SYNC-MAIN",
+    NPM: "https://www.npmjs.com/package/@holmesdev/sync",
   },
   {
-    id: 1,
-    name: "Project Name 1",
-    description: "Project description for project 1.",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzoPuARTLpGDSS6EdjrwNY2TEDnpzNGWzuaw&s",
-    technologies: ["JSX", "CSS", "CSS.TS", "HTML"],
-    mockupLink: "#",
-    codeLink: "#",
+    id: 6,
+    name: "Commercial website",
+    description:
+      "Modern coffee shop. This project showcases a crafted UI with responsive design, ensuring browsing experience across all devices.",
+    image: "../../src/assets/Untitled-1.png",
+    technologies: ["HTML", "CSS"],
+    mockupLink: "https://thecaffeinatedowl.onrender.com",
+    codeLink: "https://github.com/vorakornvt/TheCaffeinatedOwl",
   },
 ];
+
+const techColors = {
+  JSX: "bg-purple-200 text-black",
+  CSS: "bg-blue-200 text-black",
+  "CSS.TS": "bg-indigo-200 text-black",
+  HTML: "bg-orange-200 text-black",
+  PHP: "bg-teal-200 text-black",
+  MongoDB: "bg-green-200 text-black",
+  "Styled Components": "bg-yellow-200 text-black",
+  TypeScript: "bg-lime-200 text-black",
+  Firebase: "bg-red-200 text-black",
+  Bootstrap: "bg-sky-200 text-black",
+  MySql: "bg-rose-200 text-black",
+};
 
 function ProjectsPage() {
   return (
@@ -100,14 +115,16 @@ function ProjectsPage() {
                 <p className="text-lg font-main font-semibold">
                   {project.name}
                 </p>
-                <p className="text-sm mt-2 text-center">
+                <p className="text-[12px]/4 w-[250px] text-justify mt-2 ">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap justify-center mt-2 space-x-2">
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="text-fuchsia-200  border-1 px-2 py-1 rounded-full text-xs"
+                      className={`px-2 py-1 rounded-full text-xs border border-white ${
+                        techColors[tech] || "bg-gray-500 text-white"
+                      }`}
                     >
                       {tech}
                     </span>
@@ -129,22 +146,40 @@ function ProjectsPage() {
                 <div className="absolute inset-0 bg-black/50 rounded-lg"></div>{" "}
                 {/* Overlay for readability */}
                 <div className="relative z-10 flex space-x-2 mb-4">
-                  <motion.a
-                    href={project.mockupLink}
-                    className="px-3 py-2 text-black bg-fuchsia-200 text-xs rounded-lg"
-                    initial={{ opacity: 1 }}
-                    whileHover={{ opacity: 0.5 }}
-                  >
-                    MOCKUP
-                  </motion.a>
+                  {project.mockupLink && (
+                    <motion.a
+                      href={project.mockupLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-2 text-black bg-fuchsia-200 text-xs rounded-lg"
+                      initial={{ opacity: 1 }}
+                      whileHover={{ opacity: 0.5 }}
+                    >
+                      Live Demo
+                    </motion.a>
+                  )}
                   <motion.a
                     href={project.codeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="px-3 py-2 text-black bg-fuchsia-200 text-xs rounded-lg"
                     initial={{ opacity: 1 }}
                     whileHover={{ opacity: 0.5 }}
                   >
-                    CODE
+                    GITHUB
                   </motion.a>
+                  {project.NPM && (
+                    <motion.a
+                      href={project.NPM}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-2 text-black bg-fuchsia-200 text-xs rounded-lg"
+                      initial={{ opacity: 1 }}
+                      whileHover={{ opacity: 0.5 }}
+                    >
+                      NPM
+                    </motion.a>
+                  )}
                 </div>
               </div>
             </motion.div>

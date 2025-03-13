@@ -34,15 +34,14 @@ export default function Header() {
           <div className="hidden sm:block ml-auto">
             <div className="flex space-x-4">
               {navigation.map((item) => (
-                <motion.a
-                  key={item.name}
-                  href={item.href}
-                  className="font-main !text-fuchsia-200 rounded-sm px-3 py-2 text-sm font-light relative"
-                  initial={{ opacity: 1 }}
-                  whileHover={{ opacity: 0.5 }}
-                >
-                  {item.name}
-                </motion.a>
+                <motion.div key={item.name} whileHover={{ opacity: 0.5 }}>
+                  <Link
+                    to={item.href}
+                    className="font-main !text-fuchsia-200 rounded-sm px-3 py-2 text-sm font-light relative"
+                  >
+                    {item.name}
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -69,15 +68,14 @@ export default function Header() {
       <DisclosurePanel className="sm:hidden">
         <div className="space-y-1 px-2 pt-2 pb-3">
           {navigation.map((item) => (
-            <motion.a
-              key={item.name}
-              href={item.href}
-              className="font-main block  text-white hover:text-fuchsia-200 rounded-sm px-3 py-2 text-sm font-light relative"
-              initial={{ opacity: 1 }}
-              whileHover={{ opacity: 0.5 }}
-            >
-              {item.name}
-            </motion.a>
+            <motion.div key={item.name} whileHover={{ opacity: 0.5 }}>
+              <Link
+                to={item.href}
+                className="font-main block text-white hover:text-fuchsia-200 rounded-sm px-3 py-2 text-sm font-light relative"
+              >
+                {item.name}
+              </Link>
+            </motion.div>
           ))}
         </div>
       </DisclosurePanel>

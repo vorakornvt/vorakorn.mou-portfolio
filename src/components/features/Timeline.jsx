@@ -1,22 +1,20 @@
 export default function Timeline() {
   const timelineData = [
     {
-      title: "Flowbite Library v1.0.0",
-      date: "Released on December 2, 2021",
+      title: "B.F.A in Department of Jewelry",
+      date: "Augest 15, 2018",
       description:
-        "Get started with dozens of web components and interactive elements.",
+        "B.F.A in Department of Jewelry Design Faculty of Decorative Art, Slipakorn University with 2nd Class Honor .",
     },
     {
-      title: "React v18 Released",
-      date: "Released on March 29, 2022",
-      description:
-        "React 18 introduces concurrent rendering and automatic batching.",
+      title: "Senior Jewelry Brand Designer",
+      date: "March 29, 2023",
+      description: "NGG Enterprise CO,LTD",
     },
     {
-      title: "Tailwind CSS v3.0",
-      date: "Released on December 9, 2021",
-      description:
-        "New Just-in-Time engine, arbitrary values, and enhanced performance.",
+      title: "Diploma of Information Technology (Front End Web Development)",
+      date: "Present",
+      description: "First step, getting into the web development industry",
     },
   ];
   return (
@@ -24,7 +22,10 @@ export default function Timeline() {
       {" "}
       <ol className="items-center sm:flex">
         {timelineData.map((item, index) => (
-          <li key={index} className="relative mb-6 sm:mb-0">
+          <li
+            key={index}
+            className="relative mb-6 max-w-[350px] h-[250px] sm:mb-0"
+          >
             <div className="flex pt-5 items-center">
               <div className="z-10 flex items-center justify-center w-1 h-1 bg-fuchsia-50 rounded-full ring-0 ring-fuchsia-200 dark:bg-black sm:ring-8 dark:ring-gray-100 shrink-0"></div>
               <div className="hidden sm:flex w-full bg-fuchsia-200 h-0.5"></div>

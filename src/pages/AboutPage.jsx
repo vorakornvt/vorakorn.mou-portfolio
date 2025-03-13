@@ -50,6 +50,9 @@ function AboutPage() {
               CV
             </motion.a>
           </div>
+          <p className="text-center mt-1  text-[10px]  font-main">
+            For full details of my experience
+          </p>
         </div>
       </div>
       <Timeline />
