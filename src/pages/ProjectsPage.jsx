@@ -81,7 +81,7 @@ const techColors = {
 
 function ProjectsPage() {
   return (
-    <div className="bg-black flex flex-col items-center justify-center ">
+    <div className="bg-black mt-10 flex flex-col items-center justify-center ">
       <img
         alt="Project"
         src={ProjectTag}

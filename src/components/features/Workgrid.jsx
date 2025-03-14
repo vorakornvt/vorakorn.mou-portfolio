@@ -89,13 +89,13 @@ const itemData = [
     rows: 3,
   },
   {
-    img: "/src/assets/WorkGrid/4.4.png",
+    img: "/src/assets/WorkGrid/1.3.png",
     title: "3",
     cols: 2,
     rows: 1,
   },
   {
-    img: "/src/assets/WorkGrid/4.1.png",
+    img: "/src/assets/WorkGrid/3.1.png",
     title: "4",
     cols: 2,
     rows: 1,
@@ -107,7 +107,7 @@ const itemData = [
     rows: 2,
   },
   {
-    img: "/src/assets/WorkGrid/3.2.png",
+    img: "/src/assets/WorkGrid/4.3.png",
     title: "6",
     cols: 3,
     rows: 2,
