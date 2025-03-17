@@ -3,8 +3,16 @@ import Narrow from "../components/common/Narrow";
 import ProjectsPage from "./ProjectsPage";
 import AboutPage from "./AboutPage";
 import AnimatedBackground from "../components/features/AnimatedBackground";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 150); // Adjust delay if needed
+  }, []);
   return (
     <div className="relative h-full w-full bg-black">
       {/* Header (Keep Only One) */}
@@ -15,7 +23,11 @@ export default function Home() {
       <AnimatedBackground />
 
       {/* Main Content */}
-      <div className="relative isolate px-6 pt-24 lg:px-8">
+      <div
+        className={`relative isolate px-6 pt-24 lg:px-8 transition-opacity duration-1000 ease-in-out ${
+          isLoading ? "opacity-0 blur-lg" : "opacity-100 blur-0"
+        }`}
+      >
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-46">
           <div className="hidden sm:mb-1 sm:flex sm:justify-center">
             <p className="mt-8 text-lg font-main font-light text-pretty text-fuchsia-200 sm:text-xl/8">

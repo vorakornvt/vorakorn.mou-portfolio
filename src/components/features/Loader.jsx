@@ -17,14 +17,16 @@ const Loader = ({ onComplete }) => {
 
   return (
     isVisible && (
-      <motion.div
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 0 }}
-        transition={{ duration: 1, delay: 2 }}
-        className="fixed inset-0 flex items-center justify-center bg-black"
-      >
-        <SvgLoader className="w-20 h-20 animate-pulse" />
-      </motion.div>
+      <div className="relative h-full w-full bg-transparent">
+        <motion.div
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 0 }}
+          transition={{ duration: 1, delay: 2 }}
+          className="fixed inset-0 flex items-center justify-center"
+        >
+          <SvgLoader className="w-20 h-20 animate-pulse" />
+        </motion.div>
+      </div>
     )
   );
 };
