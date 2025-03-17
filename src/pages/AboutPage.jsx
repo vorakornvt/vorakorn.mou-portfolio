@@ -1,5 +1,5 @@
 import AboutmeTag from "../../src/assets/Asset14.svg";
-import AboutmePic from "../../src/assets/resource-database-yzIZO9-DsNI-unsplash.jpg";
+import AboutmePic from "../../src/assets/resource-database-yzIZO9-DsNI-unsplash.png";
 import { motion } from "motion/react";
 import Timeline from "../components/features/Timeline";
 
@@ -10,17 +10,17 @@ function AboutPage() {
         <img
           alt="Project"
           src={AboutmeTag}
-          className="h-4  mb-5 mt-5 mx-auto"
+          className="h-4 z-1  mb-5 mt-5 mx-auto"
         />
 
         {/* First Row */}
         <div className="w-full max-w-5xl flex flex-col md:flex-row gap-6">
           {/* Left Box */}
           <div className="md:w-1/2 flex flex-col justify-center p-4">
-            <p className="font-brand sm:text-[35px] max-sm:text-[35px] lg:text-[55px]">
+            <p className="font-brand z-1 sm:text-[35px] max-sm:text-[35px] lg:text-[55px]">
               VORAKORN TAWEETAWON
             </p>
-            <p className="text-justify mt-4 text-sm md:text-lg font-main">
+            <p className="text-justify z-1 mt-4 text-sm md:text-lg font-main">
               I’m a designer with expertise in web development, enabling me to
               craft seamless, interactive digital experiences. My background in
               design brings concepts to life with depth and precision, making
@@ -29,11 +29,11 @@ function AboutPage() {
           </div>
 
           {/* Right Box */}
-          <div className="md:w-1/2 flex justify-center">
+          <div className="md:w-1/2 z-1 flex justify-center">
             <img
               src={AboutmePic}
               alt="About me"
-              className="w-full max-w-md rounded-lg shadow-lg"
+              className="w-full max-w-md rounded-lg "
             />
           </div>
         </div>

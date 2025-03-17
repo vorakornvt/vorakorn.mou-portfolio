@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function NotFound() {
   return (
     <div className="bg-black text-white flex flex-col items-center justify-center min-h-[500px]">
-      <img alt="Project" src={NotFoundTag} className="h-8.5 mb-2" />
-      <p className="text-md text-gray-300">
+      <img alt="Project" src={NotFoundTag} className="h-8.5 z-1 mb-2" />
+      <p className="text-md z-1 text-gray-300">
         The requested page was not found. You might want to go back to{" "}
         <Link
           to="/"

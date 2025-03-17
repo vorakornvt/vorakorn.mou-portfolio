@@ -3,7 +3,7 @@ import NarrowIcon from "../../assets/narrow.svg";
 
 export default function Narrow() {
   return (
-    <div className="flex pt-5 pb-5 bg-black justify-center">
+    <div className="flex pt-5 pb-5 bg-transparent justify-center">
       <motion.img
         src={NarrowIcon}
         alt="Narrow Icon"

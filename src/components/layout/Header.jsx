@@ -48,13 +48,13 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden sm:block ml-auto">
-            <div className="flex space-x-4">
+          <div className="hidden  sm:block ml-auto">
+            <div className="flex  space-x-4">
               {navigation.map((item) => (
                 <motion.div key={item.name} whileHover={{ opacity: 0.5 }}>
                   <Link
                     to={item.href}
-                    className="font-main !text-fuchsia-200 rounded-sm px-3 py-2 text-sm font-light relative"
+                    className="font-main text-white rounded-sm px-3 py-2 text-sm font-light  relative"
                   >
                     {item.name}
                   </Link>

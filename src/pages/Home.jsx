@@ -1,8 +1,8 @@
 import Header from "../components/layout/Header";
-import WorkGrid from "../components/features/Workgrid";
 import Narrow from "../components/common/Narrow";
 import ProjectsPage from "./ProjectsPage";
 import AboutPage from "./AboutPage";
+import AnimatedBackground from "../components/features/AnimatedBackground";
 
 export default function Home() {
   return (
@@ -12,19 +12,7 @@ export default function Home() {
         <Header />
       </header>
 
-      {/* Decorative Background */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 -top-40 z-0 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-      >
-        <div
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-          className="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-        />
-      </div>
+      <AnimatedBackground />
 
       {/* Main Content */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
@@ -39,15 +27,15 @@ export default function Home() {
               VORAKORN
             </p>
             <p className="mt-8 text-lg font-main font-light text-pretty text-fuchsia-200 sm:text-xl/8">
-              YOUR FAVORITE CREATIVE DEVELOPER
+              Web Developer & Designer | Merging Code with Art.
             </p>
           </div>
         </div>
 
         {/* Other Sections */}
         <div className="relative w-full items-center">
-          <WorkGrid />
-          <Narrow />
+          {/* <WorkGrid /> */}
+
           <ProjectsPage />
           <Narrow />
           <AboutPage />

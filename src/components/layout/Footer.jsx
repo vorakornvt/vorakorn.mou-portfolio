@@ -1,14 +1,9 @@
 import { FaGithub } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
-
 import { FaLinkedin } from "react-icons/fa";
 
 function Footer() {
-  // Component Logic / Scripts
-
   return (
-    // Component Template (rendering)
-
     <div className="bg-black pb-1 pt-[50px] flex flex-col items-center justify-center ">
       {/* Social Media Icons */}
       <div className="flex pb-3 pt-2 space-x-6">
@@ -37,13 +32,11 @@ function Footer() {
         </a>
       </div>
       <p className="font-main text-[11px] text-white">
-        © 2025 vorakorn taweetawon — Design & Frontend{" "}
+        © Copyright {new Date().getFullYear()} — vorakorn taweetawon — Design &
+        Frontend{" "}
       </p>
     </div>
   );
 }
 
-// CSS-in-JS / Prop-Types
-
-// Exports
 export default Footer;

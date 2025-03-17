@@ -14,7 +14,7 @@ const projects = [
   },
   {
     id: 2,
-    name: "GardenofEden-Website",
+    name: "GardenofEden-database-Website",
     description:
       "Modern Tech Stack –  built using React, Tailwind UI, Firebase (Firestore), and Motion for animations.",
     image: "../../src/assets/Untitled-5.png",
@@ -24,7 +24,7 @@ const projects = [
   },
   {
     id: 3,
-    name: "Database-commercial-website",
+    name: "Database-LoopLane-website",
     description:
       "The frontend is built with React.js and styled using Bootstrap, The backend, handling authentication, database management, and API requests.",
     image: "../../src/assets/Untitled-4.png",
@@ -81,11 +81,11 @@ const techColors = {
 
 function ProjectsPage() {
   return (
-    <div className="bg-black mt-10 flex flex-col items-center justify-center ">
+    <div className="bg-black  mt-10 flex flex-col items-center justify-center ">
       <img
         alt="Project"
         src={ProjectTag}
-        className="h-4 mb-5 mt-5 flex justify-center mx-auto"
+        className="h-4 z-1 mb-5 mt-5 flex justify-center mx-auto"
       />
 
       <div className="grid gap-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-[600px] sm:w-[450px] md:w-[800px] lg:w-[1050px] overflow-y-auto scrollbar-thin scrollbar-thumb-fuchsia-300 pt-2   scrollbar-track-black">
@@ -151,7 +151,7 @@ function ProjectsPage() {
                       href={project.mockupLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-2 text-black bg-fuchsia-200 text-xs rounded-lg"
+                      className="px-3 py-2 text-black bg-orange-200 text-xs rounded-lg"
                       initial={{ opacity: 1 }}
                       whileHover={{ opacity: 0.5 }}
                     >
@@ -173,7 +173,7 @@ function ProjectsPage() {
                       href={project.NPM}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-2 text-black bg-fuchsia-200 text-xs rounded-lg"
+                      className="px-3 py-2 text-black  bg-orange-200 text-xs rounded-lg"
                       initial={{ opacity: 1 }}
                       whileHover={{ opacity: 0.5 }}
                     >
