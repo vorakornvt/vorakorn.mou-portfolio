@@ -17,27 +17,19 @@ export default function ContactPage() {
       </p>
       {/* Social Media Icons */}
       <div className="flex z-1 pb-5 space-x-10">
-        <a
-          href="https://linkedin.com/in/yourhandle"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="#" target="_blank" rel="noopener noreferrer">
           <FaLinkedin fill="white" size={"35px"} />
         </a>
 
         <a
-          href="https://github.com/yourhandle"
+          href="https://github.com/vorakornvt"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaGithub fill="white" size={"35px"} />
         </a>
 
-        <a
-          href="https://github.com/yourhandle"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="#" target="_blank" rel="noopener noreferrer">
           <FaGoogle fill="white" size={"35px"} />
         </a>
       </div>

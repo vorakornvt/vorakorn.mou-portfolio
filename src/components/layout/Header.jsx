@@ -35,7 +35,7 @@ export default function Header() {
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
-          {/* Logo Centered (Clickable) */}
+          {/* Logo */}
           <div className="absolute inset-x-0 flex justify-center">
             <Link to="/">
               <motion.img
