@@ -93,12 +93,12 @@ function ProjectsPage() {
           <motion.div
             key={project.id}
             className="relative min-w-[260px] sm:w-[260px] md:w-[300px] lg:w-[300px] h-[250px] mx-auto mt-2"
-            style={{ perspective: "1000px" }} // Ensure correct 3D perspective
+            style={{ perspective: "1000px" }}
           >
             {/* Card Inner */}
             <motion.div
               className="relative w-full h-full sm:col-auto transition-transform duration-500 transform-style-3d group"
-              whileHover={{ rotateY: 180 }} // Flip effect on hover
+              whileHover={{ rotateY: 180 }}
               style={{
                 transformStyle: "preserve-3d",
               }}
@@ -144,7 +144,6 @@ function ProjectsPage() {
                 }}
               >
                 <div className="absolute inset-0 bg-black/50 rounded-lg"></div>{" "}
-                {/* Overlay for readability */}
                 <div className="relative z-10 flex space-x-2 mb-4">
                   {project.mockupLink && (
                     <motion.a

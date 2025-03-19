@@ -31,6 +31,7 @@ function Footer() {
           <FaGoogle fill="white" size={"20px"} />
         </a>
       </div>
+
       <p className="font-main text-[11px] text-white">
         © Copyright {new Date().getFullYear()} — vorakorn taweetawon — Design &
         Frontend{" "}

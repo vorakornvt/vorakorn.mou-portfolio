@@ -33,6 +33,11 @@ export default function ContactPage() {
           <FaGoogle fill="white" size={"35px"} />
         </a>
       </div>
+      <div className="avatar">
+        <div className="ring-primary ring-offset-base-100 w-15 rounded-full ring ring-offset-2">
+          <img src="/src/assets/S__45678606_0.png" />
+        </div>
+      </div>
     </div>
   );
 }

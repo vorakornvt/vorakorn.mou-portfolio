@@ -6,16 +6,15 @@ const AnimatedBackground = () => {
       aria-hidden="true"
       className="absolute inset-x-0 blur-sm -top-80 z--1 transform-gpu overflow-hidden sm:-top-0"
     >
-      {/* First Animated Background */}
       <motion.div
         initial={{ opacity: 0.3, x: "-50%" }}
         animate={{
-          x: ["-50%", "-53%", "-55%", "-50%"], // Moves left and right
+          x: ["-50%", "-53%", "-55%", "-50%"],
           background: [
             "linear-gradient(to top right, #ff80b5, #9089fc)",
             "linear-gradient(to top right, #ff9a8b, #d0a1ff)",
             "linear-gradient(to top right, #ff80b5, #9089fc)",
-          ], // Color cycle
+          ],
         }}
         transition={{
           x: { duration: 6, repeat: Infinity, ease: "easeInOut" },
@@ -34,10 +33,10 @@ const AnimatedBackground = () => {
         <motion.div
           initial={{ opacity: 1, x: "50%" }}
           animate={{
-            x: ["50%", "55%", "52%", "50%"], // Moves in opposite direction
+            x: ["50%", "55%", "52%", "50%"],
             background: [
-              "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)", // Golden dusk
-              "linear-gradient(to top right, #FFC371, #FFB347, #FF9A8B)", // Softer golden hour
+              "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)",
+              "linear-gradient(to top right, #FFC371, #FFB347, #FF9A8B)",
               "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)",
             ],
           }}
@@ -58,10 +57,10 @@ const AnimatedBackground = () => {
         <motion.div
           initial={{ opacity: 1, x: "50%" }}
           animate={{
-            x: ["50%", "55%", "52%", "50%"], // Moves in opposite direction
+            x: ["50%", "55%", "52%", "50%"],
             background: [
-              "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)", // Golden dusk
-              "linear-gradient(to top right, #FFC371, #FFB347, #FF9A8B)", // Softer golden hour
+              "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)",
+              "linear-gradient(to top right, #FFC371, #FFB347, #FF9A8B)",
               "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)",
             ],
           }}
@@ -83,12 +82,12 @@ const AnimatedBackground = () => {
         <motion.div
           initial={{ opacity: 1, x: "50%" }}
           animate={{
-            x: ["50%", "55%", "52%", "50%"], // Moves in opposite direction
+            x: ["50%", "55%", "52%", "50%"],
             background: [
               "linear-gradient(to top right, #ff80b5, #9089fc)",
               "linear-gradient(to top right, #ff9a8b, #d0a1ff)",
               "linear-gradient(to top right, #ff80b5, #9089fc)",
-            ], // Color cycle
+            ],
           }}
           transition={{
             x: { duration: 5, repeat: Infinity, ease: "easeInOut" },
@@ -107,12 +106,12 @@ const AnimatedBackground = () => {
         <motion.div
           initial={{ opacity: 1, x: "50%" }}
           animate={{
-            x: ["50%", "55%", "52%", "50%"], // Moves in opposite direction
+            x: ["50%", "55%", "52%", "50%"],
             background: [
               "linear-gradient(to top right, #ff80b5, #9089fc)",
               "linear-gradient(to top right, #ff9a8b, #d0a1ff)",
               "linear-gradient(to top right, #ff80b5, #9089fc)",
-            ], // Color cycle
+            ],
           }}
           transition={{
             x: { duration: 5, repeat: Infinity, ease: "easeInOut" },
@@ -131,12 +130,12 @@ const AnimatedBackground = () => {
         <motion.div
           initial={{ opacity: 1, x: "50%" }}
           animate={{
-            x: ["50%", "55%", "52%", "50%"], // Moves in opposite direction
+            x: ["50%", "55%", "52%", "50%"],
             background: [
               "linear-gradient(to top right, #ff80b5, #9089fc)",
               "linear-gradient(to top right, #ff9a8b, #d0a1ff)",
               "linear-gradient(to top right, #ff80b5, #9089fc)",
-            ], // Color cycle
+            ],
           }}
           transition={{
             x: { duration: 5, repeat: Infinity, ease: "easeInOut" },
@@ -155,12 +154,12 @@ const AnimatedBackground = () => {
         <motion.div
           initial={{ opacity: 1, x: "50%" }}
           animate={{
-            x: ["50%", "55%", "52%", "50%"], // Moves in opposite direction
+            x: ["50%", "55%", "52%", "50%"],
             background: [
               "linear-gradient(to top right, #ff80b5, #9089fc)",
               "linear-gradient(to top right, #ff9a8b, #d0a1ff)",
               "linear-gradient(to top right, #ff80b5, #9089fc)",
-            ], // Color cycle
+            ],
           }}
           transition={{
             x: { duration: 5, repeat: Infinity, ease: "easeInOut" },
@@ -180,10 +179,10 @@ const AnimatedBackground = () => {
         <motion.div
           initial={{ opacity: 1, x: "50%" }}
           animate={{
-            x: ["50%", "55%", "52%", "50%"], // Moves in opposite direction
+            x: ["50%", "55%", "52%", "50%"],
             background: [
-              "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)", // Golden dusk
-              "linear-gradient(to top right, #FFC371, #FFB347, #FF9A8B)", // Softer golden hour
+              "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)",
+              "linear-gradient(to top right, #FFC371, #FFB347, #FF9A8B)",
               "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)",
             ],
           }}
@@ -204,10 +203,10 @@ const AnimatedBackground = () => {
         <motion.div
           initial={{ opacity: 1, x: "50%" }}
           animate={{
-            x: ["50%", "55%", "52%", "50%"], // Moves in opposite direction
+            x: ["50%", "55%", "52%", "50%"],
             background: [
-              "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)", // Golden dusk
-              "linear-gradient(to top right, #FFC371, #FFB347, #FF9A8B)", // Softer golden hour
+              "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)",
+              "linear-gradient(to top right, #FFC371, #FFB347, #FF9A8B)",
               "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)",
             ],
           }}
@@ -229,10 +228,10 @@ const AnimatedBackground = () => {
         <motion.div
           initial={{ opacity: 1, x: "50%" }}
           animate={{
-            x: ["50%", "55%", "52%", "50%"], // Moves in opposite direction
+            x: ["50%", "55%", "52%", "50%"],
             background: [
-              "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)", // Golden dusk
-              "linear-gradient(to top right, #FFC371, #FFB347, #FF9A8B)", // Softer golden hour
+              "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)",
+              "linear-gradient(to top right, #FFC371, #FFB347, #FF9A8B)",
               "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)",
             ],
           }}
@@ -254,10 +253,10 @@ const AnimatedBackground = () => {
         <motion.div
           initial={{ opacity: 1, x: "50%" }}
           animate={{
-            x: ["50%", "55%", "52%", "50%"], // Moves in opposite direction
+            x: ["50%", "55%", "52%", "50%"],
             background: [
-              "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)", // Golden dusk
-              "linear-gradient(to top right, #FFC371, #FFB347, #FF9A8B)", // Softer golden hour
+              "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)",
+              "linear-gradient(to top right, #FFC371, #FFB347, #FF9A8B)",
               "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)",
             ],
           }}
@@ -279,10 +278,10 @@ const AnimatedBackground = () => {
         <motion.div
           initial={{ opacity: 1, x: "50%" }}
           animate={{
-            x: ["50%", "55%", "52%", "50%"], // Moves in opposite direction
+            x: ["50%", "55%", "52%", "50%"],
             background: [
-              "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)", // Golden dusk
-              "linear-gradient(to top right, #FFC371, #FFB347, #FF9A8B)", // Softer golden hour
+              "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)",
+              "linear-gradient(to top right, #FFC371, #FFB347, #FF9A8B)",
               "linear-gradient(to top right, #FDB813, #FF9A8B, #FF6A88)",
             ],
           }}
