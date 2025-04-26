@@ -2,7 +2,8 @@ import Header from "../components/layout/Header";
 import Narrow from "../components/common/Narrow";
 import ProjectsPage from "./ProjectsPage";
 import AboutPage from "./AboutPage";
-import AnimatedBackground from "../components/features/AnimatedBackground";
+// import AnimatedBackground from "../components/features/AnimatedBackground";
+import DotBG from "../components/features/DotBG";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 150); // Adjust delay if needed
+    }, 150);
   }, []);
   return (
     <div className="relative h-full w-full bg-black">
@@ -20,7 +21,11 @@ export default function Home() {
         <Header />
       </header>
 
-      <AnimatedBackground />
+      <DotBG />
+
+      {/* 
+      
+      <AnimatedBackground /> */}
 
       {/* Main Content */}
       <div

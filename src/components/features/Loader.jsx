@@ -11,7 +11,7 @@ const Loader = ({ onComplete }) => {
       if (onComplete && typeof onComplete === "function") {
         onComplete();
       }
-    }, 3000); // Adjust timing as needed
+    }, 3000);
     return () => clearTimeout(timer);
   }, [onComplete]);
 

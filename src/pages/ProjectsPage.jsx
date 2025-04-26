@@ -4,13 +4,13 @@ import ProjectTag from "../../src/assets/Asset13.svg";
 const projects = [
   {
     id: 1,
-    name: "Basic-Frontend",
+    name: "API APP - Chef's kiss",
     description:
-      "a basic front-end React project, a work-in-progress with minimal content.",
-    image: "../../src/assets/phpimage.png",
-    technologies: ["JSX", "Bootstrap"],
+      "This is API app called Chef's Kiss, using React with styled-components, localStorage, and data from the Tasty API",
+    image: "../../src/assets/Untitled-6.png",
+    technologies: ["Tailwind", "API", "Styled Components"],
     mockupLink: "#",
-    codeLink: "https://github.com/vorakornvt/Basic-Frontend",
+    codeLink: "https://github.com/vorakornvt/Chef-sKiss-FoodApiApp",
   },
   {
     id: 2,
@@ -66,17 +66,19 @@ const projects = [
 ];
 
 const techColors = {
-  JSX: "bg-purple-200 text-black",
-  CSS: "bg-blue-200 text-black",
-  "CSS.TS": "bg-indigo-200 text-black",
-  HTML: "bg-orange-200 text-black",
-  PHP: "bg-teal-200 text-black",
-  MongoDB: "bg-green-200 text-black",
-  "Styled Components": "bg-yellow-200 text-black",
-  TypeScript: "bg-lime-200 text-black",
-  Firebase: "bg-red-200 text-black",
-  Bootstrap: "bg-sky-200 text-black",
-  MySql: "bg-rose-200 text-black",
+  JSX: "bg-purple-200 text-black text-[10px] ",
+  CSS: "bg-blue-200 text-black text-[10px]",
+  "CSS.TS": "bg-indigo-200 text-black text-[10px]",
+  HTML: "bg-orange-200 text-black text-[10px]",
+  PHP: "bg-teal-200 text-black text-[10px]",
+  MongoDB: "bg-green-200 text-black text-[10px]",
+  "Styled Components": "bg-yellow-200 text-black text-[10px]",
+  TypeScript: "bg-lime-200 text-black text-[10px]",
+  Firebase: "bg-red-200 text-black text-[10px]",
+  Bootstrap: "bg-sky-200 text-black text-[10px]",
+  MySql: "bg-rose-200 text-black text-[10px]",
+  Tailwind: "bg-pink-200 text-black text-[10px]",
+  API: "bg-green-100 text-black text-[10px]",
 };
 
 function ProjectsPage() {
