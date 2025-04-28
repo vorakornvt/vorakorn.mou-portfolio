@@ -18,8 +18,7 @@ export default function Timeline() {
     },
   ];
   return (
-    <div className="bg-black  flex flex-col items-center justify-center ">
-      {" "}
+    <div className="bg-black text-white flex flex-col items-center pt-3 justify-center p-6">
       <ol className="items-center sm:flex">
         {timelineData.map((item, index) => (
           <li

@@ -39,7 +39,7 @@ function AboutPage() {
         </div>
 
         {/* Second Row */}
-        <div className="w-full max-w-5xl text-center">
+        <div className="bg-black  text-white flex flex-col items-center justify-center">
           <div className="flex items-center justify-center gap-x-6">
             <motion.a
               href="#"
@@ -54,8 +54,8 @@ function AboutPage() {
             For full details of my experience
           </p>
         </div>
+        <Timeline />
       </div>
-      <Timeline />
     </div>
   );
 }

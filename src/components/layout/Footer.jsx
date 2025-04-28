@@ -4,9 +4,9 @@ import { FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="bg-black pb-1 pt-[50px] flex flex-col items-center justify-center ">
+    <div className="bg-black text-white flex flex-col items-center pt-5 justify-center p-6">
       {/* Social Media Icons */}
-      <div className="flex pb-3 pt-2 space-x-6">
+      <div className="flex z-1 pb-3 pt-2 space-x-6">
         <a
           href="https://linkedin.com/in/yourhandle"
           target="_blank"
@@ -32,7 +32,7 @@ function Footer() {
         </a>
       </div>
 
-      <p className="font-main text-[11px] text-white">
+      <p className="font-main text-[11px] z-1 text-white">
         © Copyright {new Date().getFullYear()} — vorakorn taweetawon — Design &
         Frontend{" "}
       </p>
