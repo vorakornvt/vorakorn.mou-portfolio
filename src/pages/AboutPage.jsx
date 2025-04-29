@@ -1,5 +1,5 @@
 import AboutmeTag from "../../src/assets/Asset14.svg";
-import AboutmePic from "../../src/assets/resource-database-yzIZO9-DsNI-unsplash.png";
+import AboutmePic from "../../src/assets/BGob2.png";
 import { motion } from "motion/react";
 import Timeline from "../components/features/Timeline";
 
