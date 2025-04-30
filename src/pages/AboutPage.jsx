@@ -2,6 +2,7 @@ import AboutmeTag from "../../src/assets/Asset14.svg";
 import AboutmePic from "../../src/assets/BGob2.png";
 import { motion } from "motion/react";
 import Timeline from "../components/features/Timeline";
+import RotatingModel from "../components/features/RotatingModel";
 
 function AboutPage() {
   return (
@@ -30,11 +31,13 @@ function AboutPage() {
 
           {/* Right Box */}
           <div className="md:w-1/2 z-1 flex justify-center">
-            <img
+            {/* <img
               src={AboutmePic}
               alt="About me"
               className="w-full max-w-md rounded-lg "
-            />
+            /> */}
+
+            <RotatingModel />
           </div>
         </div>
 

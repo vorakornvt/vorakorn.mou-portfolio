@@ -1,3 +1,5 @@
+import RotatingModel from "./RotatingModel";
+
 export default function Timeline() {
   const timelineData = [
     {
