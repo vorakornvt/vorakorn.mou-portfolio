@@ -42,7 +42,7 @@ const RotatingModel = () => {
       "/models/PTextture.glb",
       (gltf) => {
         const model = gltf.scene;
-        model.scale.set(105, 105, 105);
+        model.scale.set(10, 10, 10);
         model.position.set(0, 0, 0);
 
         let animatedMaterial = null;
