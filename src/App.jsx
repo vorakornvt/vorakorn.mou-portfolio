@@ -12,7 +12,6 @@ import NotFound from "./pages/NotFound";
 // Import components
 import Layout from "./components/layout/Layout";
 import Loader from "./components/features/Loader";
-import RotatingModel from "./components/features/RotatingModel";
 
 function App() {
   const [loading, setLoading] = useState(true);

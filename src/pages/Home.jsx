@@ -5,7 +5,6 @@ import AboutPage from "./AboutPage";
 // import AnimatedBackground from "../components/features/AnimatedBackground";
 import DotBG from "../components/features/DotBG";
 import { useState, useEffect } from "react";
-import RotatingModel from "../components/features/RotatingModel";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);

@@ -55,7 +55,7 @@ const projects = [
   },
   {
     id: 6,
-    name: "Commercial website",
+    name: "Commercial Static website",
     description:
       "Modern coffee shop. This project showcases a crafted UI with responsive design, ensuring browsing experience across all devices.",
     image: "../../src/assets/Untitled-1.png",
