@@ -138,16 +138,13 @@ function ProjectsPage() {
               <div
                 className="absolute inset-0 flex flex-col justify-end border border-fuchsia-200 items-center bg-black text-white rounded-lg p-4 "
                 style={{
-                  backgroundImage: `url(${project.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
                   transform: "rotateY(180deg)",
                   backfaceVisibility: "hidden",
-                  border: "2px solid red", // 👈 add this
-                  minHeight: "250px",
                 }}
               >
-                {/* <div className="absolute inset-0 bg-black/50 rounded-lg"></div>{" "} */}
+                <div className="absolute inset-0 bg-black/50 rounded-lg">
+                  <img src={project.image} className="h-100 w-100 rounded-md" />
+                </div>{" "}
                 <div className="relative z-10 flex space-x-2 mb-4">
                   {project.mockupLink && (
                     <motion.a
