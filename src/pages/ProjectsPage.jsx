@@ -8,7 +8,7 @@ const projects = [
     name: "Chef's kiss - external API Food searching website",
     description:
       "This is website called Chef's Kiss, using React with styled-components, localStorage, and data from the Tasty API (Mock data)",
-    image: "/public/assets/Untitled-6.png",
+    image: "https://vorakorn-vt-portfolio.onrender.com/assets/Untitled-6.png",
     technologies: ["Tailwind", "API", "Styled Components"],
     mockupLink: "https://chefkiss-foodapp.onrender.com/",
     codeLink: "https://github.com/vorakornvt/Chef-sKiss-FoodApiApp",
@@ -18,7 +18,7 @@ const projects = [
     name: "GardenofEden - Full stack Website",
     description:
       "Modern Tech Stack –  built using React, Tailwind UI, Firebase, to display products amd with authentication that allow admin to process CRUD operation and users to filter products.",
-    image: "/public/assets/Untitled-5.png",
+    image: "https://vorakorn-vt-portfolio.onrender.com/assets/Untitled-5.png",
     technologies: ["JSX", "CSS.TS", "HTML", "Firebase"],
     mockupLink: "https://gardenof-eden-website.vercel.app/",
     codeLink: "https://github.com/vorakornvt/GardenofEden-Website",
@@ -28,7 +28,7 @@ const projects = [
     name: "LoopLane - Full Stack Website",
     description:
       "The frontend is built with React.js and styled using Bootstrap, The backend, handling authentication, database management CRUD operation, allow users to manage their products",
-    image: "/public/assets/Untitled-4.png",
+    image: "https://vorakorn-vt-portfolio.onrender.com/assets/Untitled-4.png",
     technologies: ["JSX", "Bootstrap", "MongoDB"],
     mockupLink: "https://loop-lane.vercel.app/",
     codeLink: "https://github.com/vorakornvt/Database-commercial-website",
@@ -38,7 +38,7 @@ const projects = [
     name: "Artify - PHP website",
     description:
       "PHP-based full slack blog application. The project includes various PHP scripts , which can manage blog functionalities like post creation, editing, and internal storage.",
-    image: "/public/assets/Untitled-3.png",
+    image: "https://vorakorn-vt-portfolio.onrender.com/assets/Untitled-3.png",
     technologies: ["PHP", "Bootstrap", "MySql"],
 
     codeLink: "https://github.com/vorakornvt/PHP-Blog-website",
@@ -48,7 +48,7 @@ const projects = [
     name: "Sync-UI Component",
     description:
       "NPM package for Reuseable Button & Alert & Alert dialog components.",
-    image: "/public/assets/Untitled-2.png",
+    image: "https://vorakorn-vt-portfolio.onrender.com/assets/Untitled-2.png",
     technologies: ["JSX", "CSS", "Styled Components"],
     mockupLink: "https://sync-documentation.onrender.com/",
     codeLink: "https://github.com/4DEVS-Holmesglen/4DEVS-SYNC-MAIN",
