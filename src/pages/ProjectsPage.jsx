@@ -4,39 +4,39 @@ import ProjectTag from "../../src/assets/Asset13.svg";
 const projects = [
   {
     id: 1,
-    name: "API APP - Chef's kiss",
+    name: "Chef's kiss - external API Food searching website",
     description:
-      "This is API app called Chef's Kiss, using React with styled-components, localStorage, and data from the Tasty API",
+      "This is website called Chef's Kiss, using React with styled-components, localStorage, and data from the Tasty API (Mock data)",
     image: "../../src/assets/Untitled-6.png",
     technologies: ["Tailwind", "API", "Styled Components"],
-    mockupLink: "#",
+    mockupLink: "https://chefkiss-foodapp.onrender.com/",
     codeLink: "https://github.com/vorakornvt/Chef-sKiss-FoodApiApp",
   },
   {
     id: 2,
-    name: "GardenofEden-database-Website",
+    name: "GardenofEden - Full stack Website",
     description:
-      "Modern Tech Stack –  built using React, Tailwind UI, Firebase (Firestore), and Motion for animations.",
+      "Modern Tech Stack –  built using React, Tailwind UI, Firebase, to display products amd with authentication that allow admin to process CRUD operation and users to filter products.",
     image: "../../src/assets/Untitled-5.png",
     technologies: ["JSX", "CSS.TS", "HTML", "Firebase"],
-    mockupLink: "#",
+    mockupLink: "https://gardenof-eden-website.vercel.app/",
     codeLink: "https://github.com/vorakornvt/GardenofEden-Website",
   },
   {
     id: 3,
-    name: "Database-LoopLane-website",
+    name: "LoopLane - Full Stack Website",
     description:
-      "The frontend is built with React.js and styled using Bootstrap, The backend, handling authentication, database management, and API requests.",
+      "The frontend is built with React.js and styled using Bootstrap, The backend, handling authentication, database management CRUD operation, allow users to manage their products",
     image: "../../src/assets/Untitled-4.png",
     technologies: ["JSX", "Bootstrap", "MongoDB"],
-    mockupLink: "#",
+    mockupLink: "https://loop-lane.vercel.app/",
     codeLink: "https://github.com/vorakornvt/Database-commercial-website",
   },
   {
     id: 4,
-    name: "PHP-based blog website",
+    name: "Artify - PHP website",
     description:
-      "PHP-based blog application. The project includes various PHP scripts , which can manage blog functionalities like post creation, editing, and storage.",
+      "PHP-based full slack blog application. The project includes various PHP scripts , which can manage blog functionalities like post creation, editing, and internal storage.",
     image: "../../src/assets/Untitled-3.png",
     technologies: ["PHP", "Bootstrap", "MySql"],
 
@@ -44,7 +44,7 @@ const projects = [
   },
   {
     id: 5,
-    name: "UI Component",
+    name: "Sync-UI Component",
     description:
       "NPM package for Reuseable Button & Alert & Alert dialog components.",
     image: "../../src/assets/Untitled-2.png",
@@ -55,7 +55,7 @@ const projects = [
   },
   {
     id: 6,
-    name: "Commercial Static website",
+    name: "Caffeinated Owl Static website",
     description:
       "Modern coffee shop. This project showcases a crafted UI with responsive design, ensuring browsing experience across all devices.",
     image: "../../src/assets/Untitled-1.png",
@@ -152,7 +152,7 @@ function ProjectsPage() {
                       href={project.mockupLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-2 text-black bg-orange-200 text-xs rounded-lg"
+                      className="px-3 py-2 text-black bg-fuchsia-200 text-xs rounded-lg"
                       initial={{ opacity: 1 }}
                       whileHover={{ opacity: 0.5 }}
                     >
