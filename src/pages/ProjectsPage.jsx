@@ -143,6 +143,8 @@ function ProjectsPage() {
                   backgroundPosition: "center",
                   transform: "rotateY(180deg)",
                   backfaceVisibility: "hidden",
+                  border: "2px solid red", // 👈 add this
+                  minHeight: "250px",
                 }}
               >
                 {/* <div className="absolute inset-0 bg-black/50 rounded-lg"></div>{" "} */}
