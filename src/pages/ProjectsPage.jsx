@@ -145,7 +145,7 @@ function ProjectsPage() {
                   backfaceVisibility: "hidden",
                 }}
               >
-                <div className="absolute inset-0 bg-black/50 rounded-lg"></div>{" "}
+                {/* <div className="absolute inset-0 bg-black/50 rounded-lg"></div>{" "} */}
                 <div className="relative z-10 flex space-x-2 mb-4">
                   {project.mockupLink && (
                     <motion.a
