@@ -59,7 +59,7 @@ const projects = [
     name: "Caffeinated Owl Static website",
     description:
       "Modern coffee shop. This project showcases a crafted UI with responsive design, ensuring browsing experience across all devices.",
-    image: "/public/assets/Untitled-1.png",
+    image: "https://vorakorn-vt-portfolio.onrender.com/assets/Untitled-1.png",
     technologies: ["HTML", "CSS"],
     mockupLink: "https://thecaffeinatedowl.onrender.com",
     codeLink: "https://github.com/vorakornvt/TheCaffeinatedOwl",
