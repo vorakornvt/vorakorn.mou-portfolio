@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ProjectTag from "../../src/assets/Asset13.svg";
+import { useState } from "react";
 
 const projects = [
   {
@@ -82,109 +83,120 @@ const techColors = {
 };
 
 function ProjectsPage() {
+  const [flippedCard, setFlippedCard] = useState(null);
+
   return (
-    <div className="bg-black  mt-10 flex flex-col items-center justify-center ">
+    <div className="bg-black mt-10 flex flex-col items-center justify-center">
       <img
         alt="Project"
         src={ProjectTag}
         className="h-4 z-1 mb-5 mt-5 flex justify-center mx-auto"
       />
 
-      <div className="grid gap-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-[600px] sm:w-[450px] md:w-[800px] lg:w-[1050px] overflow-y-auto scrollbar-thin scrollbar-thumb-fuchsia-300 pt-2   scrollbar-track-black">
-        {projects.map((project) => (
-          <motion.div
-            key={project.id}
-            className="relative min-w-[260px] sm:w-[260px] md:w-[300px] lg:w-[300px] h-[250px] mx-auto mt-2"
-            style={{ perspective: "1000px" }}
-          >
-            {/* Card Inner */}
-            <motion.div
-              className="relative w-full h-full sm:col-auto transition-transform duration-500 transform-style-3d group"
-              whileHover={{ rotateY: 180 }}
-              style={{
-                transformStyle: "preserve-3d",
-              }}
-            >
-              {/* Front Side */}
-              <div
-                className="absolute inset-0 flex flex-col justify-center items-center bg-black text-white p-4"
-                style={{
-                  backfaceVisibility: "hidden",
-                  borderRadius: "10px",
-                  border: "solid 0.5px white",
-                }}
-              >
-                <p className="text-lg font-main font-semibold">
-                  {project.name}
-                </p>
-                <p className="text-[12px]/4 w-[250px] text-justify mt-2 ">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap justify-center mt-2 space-x-2">
-                  {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className={`px-2 py-1 rounded-full text-xs border border-white ${
-                        techColors[tech] || "bg-gray-500 text-white"
-                      }`}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+      <div className="grid gap-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-[600px] sm:w-[450px] md:w-[800px] lg:w-[1050px] overflow-y-auto scrollbar-thin scrollbar-thumb-fuchsia-300 pt-2 scrollbar-track-black">
+        {projects.map((project) => {
+          const isFlipped = flippedCard === project.id;
 
-              {/* Back Side */}
+          return (
+            <div
+              key={project.id}
+              className="relative min-w-[260px] sm:w-[260px] md:w-[300px] lg:w-[300px] h-[250px] mx-auto mt-2"
+              style={{ perspective: "1000px" }}
+              onMouseEnter={() => setFlippedCard(project.id)}
+              onMouseLeave={() => setFlippedCard(null)}
+            >
               <div
-                className="absolute inset-0 flex flex-col justify-end border border-fuchsia-200 items-center bg-black text-white rounded-lg p-4 "
+                className={`relative w-full h-full transition-transform duration-500`}
                 style={{
-                  transform: "rotateY(180deg)",
-                  backfaceVisibility: "hidden",
+                  transformStyle: "preserve-3d",
+                  transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
                 }}
               >
-                <div className="absolute inset-0 bg-black/50 rounded-lg">
-                  <img src={project.image} className="h-100 w-100 rounded-md" />
-                </div>{" "}
-                <div className="relative z-10 flex space-x-2 mb-4">
-                  {project.mockupLink && (
+                {/* Front Side */}
+                <div
+                  className="absolute inset-0 flex flex-col justify-center items-center bg-black text-white p-4"
+                  style={{
+                    backfaceVisibility: "hidden",
+                    borderRadius: "10px",
+                    border: "solid 0.5px white",
+                  }}
+                >
+                  <p className="text-lg font-main font-semibold">
+                    {project.name}
+                  </p>
+                  <p className="text-[12px]/4 w-[250px] text-justify mt-2">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap justify-center mt-2 space-x-2">
+                    {project.technologies.map((tech, index) => (
+                      <span
+                        key={index}
+                        className={`px-2 py-1 rounded-full text-xs border border-white ${
+                          techColors[tech] || "bg-gray-500 text-white"
+                        }`}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Back Side */}
+                <div
+                  className="absolute inset-0 flex flex-col justify-end border border-fuchsia-200 items-center bg-black text-white rounded-lg p-4"
+                  style={{
+                    transform: "rotateY(180deg)",
+                    backfaceVisibility: "hidden",
+                  }}
+                >
+                  <div className="absolute inset-0 bg-black/50 rounded-lg">
+                    <img
+                      src={project.image}
+                      alt="Project Preview"
+                      className="h-full w-full object-cover rounded-md"
+                    />
+                  </div>
+                  <div className="relative z-10 flex space-x-2 mb-4">
+                    {project.mockupLink && (
+                      <motion.a
+                        href={project.mockupLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-2 text-black bg-fuchsia-200 text-xs rounded-lg"
+                        initial={{ opacity: 1 }}
+                        whileHover={{ opacity: 0.5 }}
+                      >
+                        Live Demo
+                      </motion.a>
+                    )}
                     <motion.a
-                      href={project.mockupLink}
+                      href={project.codeLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-3 py-2 text-black bg-fuchsia-200 text-xs rounded-lg"
                       initial={{ opacity: 1 }}
                       whileHover={{ opacity: 0.5 }}
                     >
-                      Live Demo
+                      GITHUB
                     </motion.a>
-                  )}
-                  <motion.a
-                    href={project.codeLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-2 text-black bg-fuchsia-200 text-xs rounded-lg"
-                    initial={{ opacity: 1 }}
-                    whileHover={{ opacity: 0.5 }}
-                  >
-                    GITHUB
-                  </motion.a>
-                  {project.NPM && (
-                    <motion.a
-                      href={project.NPM}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-3 py-2 text-black  bg-orange-200 text-xs rounded-lg"
-                      initial={{ opacity: 1 }}
-                      whileHover={{ opacity: 0.5 }}
-                    >
-                      NPM
-                    </motion.a>
-                  )}
+                    {project.NPM && (
+                      <motion.a
+                        href={project.NPM}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-2 text-black bg-orange-200 text-xs rounded-lg"
+                        initial={{ opacity: 1 }}
+                        whileHover={{ opacity: 0.5 }}
+                      >
+                        NPM
+                      </motion.a>
+                    )}
+                  </div>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
-        ))}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
