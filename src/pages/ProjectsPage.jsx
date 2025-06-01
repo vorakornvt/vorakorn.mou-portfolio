@@ -5,46 +5,26 @@ import { useState } from "react";
 const projects = [
   {
     id: 1,
-    name: "Chef's kiss - external API Food searching website",
+    name: "Geog - next.js website",
     description:
-      "This is website called Chef's Kiss, using React with styled-components, localStorage, and data from the Tasty API (Mock data)",
-    image: "https://vorakornvt-portfolio.vercel.app//assets/Untitled-6.png",
-    technologies: ["Tailwind", "API", "Styled Components"],
-    mockupLink: "https://chefkiss-foodapp.onrender.com/",
-    codeLink: "https://github.com/vorakornvt/Chef-sKiss-FoodApiApp",
+      "GREG is a fast, modern web app that provides detailed country information using the REST Countries API. Explore population, region, flags, and more in one place.",
+    image: "https://vorakornvt-portfolio.vercel.app//assets/Untitled-7.png",
+    technologies: ["Tailwind", "API", "NextJS"],
+    mockupLink: "https://geog-co.vercel.app/",
+    codeLink: "https://github.com/vorakornvt/Geog",
   },
   {
     id: 2,
-    name: "GardenofEden - Full stack Website",
+    name: "Caffeinated Owl Static website",
     description:
-      "Modern Tech Stack –  built using React, Tailwind UI, Firebase, to display products amd with authentication that allow admin to process CRUD operation and users to filter products.",
-    image: "https://vorakornvt-portfolio.vercel.app//assets/Untitled-5.png",
-    technologies: ["JSX", "CSS.TS", "HTML", "Firebase"],
-    mockupLink: "https://gardenof-eden-website.vercel.app/",
-    codeLink: "https://github.com/vorakornvt/GardenofEden-Website",
+      "Modern coffee shop. This project showcases a crafted UI with responsive design, ensuring browsing experience across all devices.",
+    image: "https://vorakornvt-portfolio.vercel.app//assets/Untitled-1.png",
+    technologies: ["HTML", "CSS"],
+    mockupLink: "https://thecaffeinatedowl.onrender.com",
+    codeLink: "https://github.com/vorakornvt/TheCaffeinatedOwl",
   },
   {
     id: 3,
-    name: "LoopLane - Full Stack Website",
-    description:
-      "The frontend is built with React.js and styled using Bootstrap, The backend, handling authentication, database management CRUD operation, allow users to manage their products",
-    image: "https://vorakornvt-portfolio.vercel.app//assets/Untitled-4.png",
-    technologies: ["JSX", "Bootstrap", "MongoDB"],
-    mockupLink: "https://loop-lane.vercel.app/",
-    codeLink: "https://github.com/vorakornvt/Database-commercial-website",
-  },
-  {
-    id: 4,
-    name: "Artify - PHP website",
-    description:
-      "PHP-based full slack blog application. The project includes various PHP scripts , which can manage blog functionalities like post creation, editing, and internal storage.",
-    image: "https://vorakornvt-portfolio.vercel.app//assets/Untitled-3.png",
-    technologies: ["PHP", "Bootstrap", "MySql"],
-
-    codeLink: "https://github.com/vorakornvt/PHP-Blog-website",
-  },
-  {
-    id: 5,
     name: "Sync-UI Component",
     description:
       "NPM package for Reuseable Button & Alert & Alert dialog components.",
@@ -55,14 +35,43 @@ const projects = [
     NPM: "https://www.npmjs.com/package/@holmesdev/sync",
   },
   {
-    id: 6,
-    name: "Caffeinated Owl Static website",
+    id: 4,
+    name: "LoopLane - Full Stack Website",
     description:
-      "Modern coffee shop. This project showcases a crafted UI with responsive design, ensuring browsing experience across all devices.",
-    image: "https://vorakornvt-portfolio.vercel.app//assets/Untitled-1.png",
-    technologies: ["HTML", "CSS"],
-    mockupLink: "https://thecaffeinatedowl.onrender.com",
-    codeLink: "https://github.com/vorakornvt/TheCaffeinatedOwl",
+      "The frontend is built with React.js and styled using Bootstrap, The backend, handling authentication, database management CRUD operation, allow users to manage their products",
+    image: "https://vorakornvt-portfolio.vercel.app//assets/Untitled-4.png",
+    technologies: ["JSX", "Bootstrap", "MongoDB"],
+    mockupLink: "https://loop-lane.vercel.app/",
+    codeLink: "https://github.com/vorakornvt/Database-commercial-website",
+  },
+  {
+    id: 5,
+    name: "GardenofEden - Full stack Website",
+    description:
+      "Modern Tech Stack –  built using React, Tailwind UI, Firebase, to display products amd with authentication that allow admin to process CRUD operation and users to filter products.",
+    image: "https://vorakornvt-portfolio.vercel.app//assets/Untitled-5.png",
+    technologies: ["JSX", "CSS.TS", "HTML", "Firebase"],
+    mockupLink: "https://gardenof-eden-website.vercel.app/",
+    codeLink: "https://github.com/vorakornvt/GardenofEden-Website",
+  },
+  {
+    id: 6,
+    name: "Chef's kiss - external API Food searching website",
+    description:
+      "This is website called Chef's Kiss, using React with styled-components, localStorage, and data from the Tasty API (Mock data)",
+    image: "https://vorakornvt-portfolio.vercel.app//assets/Untitled-6.png",
+    technologies: ["Tailwind", "API", "Styled Components"],
+    mockupLink: "https://chefkiss-foodapp.onrender.com/",
+    codeLink: "https://github.com/vorakornvt/Chef-sKiss-FoodApiApp",
+  },
+  {
+    id: 7,
+    name: "Artify - PHP website",
+    description:
+      "PHP-based full slack blog application. The project includes various PHP scripts , which can manage blog functionalities like post creation, editing, and internal storage.",
+    image: "https://vorakornvt-portfolio.vercel.app//assets/Untitled-3.png",
+    technologies: ["PHP", "Bootstrap", "MySql"],
+    codeLink: "https://github.com/vorakornvt/PHP-Blog-website",
   },
 ];
 
@@ -80,6 +89,7 @@ const techColors = {
   MySql: "bg-rose-200 text-black text-[10px]",
   Tailwind: "bg-pink-200 text-black text-[10px]",
   API: "bg-green-100 text-black text-[10px]",
+  NextJS: "bg-purple-200 text-black text-[10px] ",
 };
 
 function ProjectsPage() {
@@ -93,7 +103,7 @@ function ProjectsPage() {
         className="h-4 z-1 mb-5 mt-5 flex justify-center mx-auto"
       />
 
-      <div className="grid gap-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-[600px] sm:w-[450px] md:w-[800px] lg:w-[1050px] overflow-y-auto scrollbar-thin scrollbar-thumb-fuchsia-300 pt-2 scrollbar-track-black">
+      <div className="grid gap-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-[650px] sm:w-[450px] md:w-[800px] lg:w-[1050px] overflow-y-auto scrollbar-thin scrollbar-thumb-fuchsia-300 pt-2 scrollbar-track-black">
         {projects.map((project) => {
           const isFlipped = flippedCard === project.id;
 
