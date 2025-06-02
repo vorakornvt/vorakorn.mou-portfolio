@@ -1,4 +1,4 @@
-import ContactTag from "../../src/assets/Asset12.svg";
+import ContactTag from "../../src/assets/Asset15.png";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
