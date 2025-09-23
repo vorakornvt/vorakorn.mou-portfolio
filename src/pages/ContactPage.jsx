@@ -1,7 +1,7 @@
 import ContactTag from "../../src/assets/Asset15.png";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
-import { FaGoogle } from "react-icons/fa";
+import GmailButton from "../components/features/GmailButton";
 
 export default function ContactPage() {
   return (
@@ -29,9 +29,7 @@ export default function ContactPage() {
           <FaGithub fill="white" size={"35px"} />
         </a>
 
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <FaGoogle fill="white" size={"35px"} />
-        </a>
+        <GmailButton />
       </div>
     </div>
   );
