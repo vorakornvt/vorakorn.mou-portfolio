@@ -40,10 +40,12 @@ function AboutPage() {
         </div>
 
         {/* Second Row */}
-        <div className="bg-black  text-white flex flex-col items-center justify-center">
+        <div className="bg-black text-white flex flex-col items-center justify-center">
           <div className="flex items-center justify-center gap-x-6">
             <motion.a
-              href="#"
+              href="https://drive.google.com/file/d/1rXgombLkwCgk4WOOqhoykFH65o3rfxU4/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-main !text-fuchsia-200 w-[150px] rounded-[30px] px-3 py-2 text-lg border font-light relative"
               initial={{ opacity: 1 }}
               whileHover={{ opacity: 0.5 }}
@@ -51,7 +53,8 @@ function AboutPage() {
               CV
             </motion.a>
           </div>
-          <p className="text-center mt-1  text-[10px]  font-main">
+
+          <p className="text-center mt-1 text-[10px] font-main">
             For full details of my experience
           </p>
         </div>
