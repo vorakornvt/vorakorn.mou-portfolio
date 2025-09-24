@@ -17,7 +17,11 @@ export default function ContactPage() {
       </p>
       {/* Social Media Icons */}
       <div className="flex z-1 pb-5 space-x-10">
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://linkedin.com/in/vorakorn-taweetawon-5b4425132"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaLinkedin fill="white" size={"35px"} />
         </a>
 
